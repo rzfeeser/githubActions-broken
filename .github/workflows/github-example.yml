@@ -17,3 +17,4 @@ jobs:
         env:
           First_Name: Mona
           DAY_OF_WEEK: Tuesday
+          MAKING_THIS_UP: ${{ vars.MAKING_THIS_UP_A }}
