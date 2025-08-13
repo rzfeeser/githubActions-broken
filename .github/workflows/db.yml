@@ -1,0 +1,23 @@
+# Alta3 Research
+# by RZFeeser@alta3.com
+
+name: Running a Py Script (we pretend this edits some DB backend)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run script to edit db
+        run: python db.py
